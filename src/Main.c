@@ -18,11 +18,11 @@ int main() {
     TTF_Font *font = TTF_OpenFont("../res/DroidSans.ttf", 12);
     printf("%s\n", TTF_GetError());
     SDL_Color testTextColor = {255, 0, 0, 255};
-    SDL_Surface *testTextSurface = TTF_RenderText_Solid(font, "Hello, SDL!", testTextColor);
+    SDL_Surface *testTextSurface = TTF_RenderText_Solid(font, "X", testTextColor);
     printf("%s\n", SDL_GetError());
     SDL_Texture *testTextTexture = SDL_CreateTextureFromSurface(app.renderer, testTextSurface);
     printf("%s\n", SDL_GetError());
-    SDL_Rect testTextDimensions = {150, 150, 350, 150};
+    SDL_Rect testTextDimensions = {150, 150, 50, 50};
 
     SDL_Event eventLoop;
     while (app.running) {
