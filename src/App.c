@@ -19,6 +19,7 @@ void appInit(AppWindowData *app) {
     if (app->renderer == NULL) { printf("%s\n", SDL_GetError()); return; }
 
     app->running = true;
+    app->currentState = MainMenu;
 }
 
 void appQuit(AppWindowData *app) {
